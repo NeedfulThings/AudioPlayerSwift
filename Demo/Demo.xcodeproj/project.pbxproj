@@ -116,7 +116,7 @@
 				E2A9AFAB1C498E2900FE943A /* Info.plist */,
 			);
 			name = ios;
-			path = "AudioPlayer Sample/ios";
+			path = Demo/iOS;
 			sourceTree = "<group>";
 		};
 		E2A9AFB31C498ED000FE943A /* AudioPlayer */ = {
@@ -154,7 +154,7 @@
 				E2B2F9F31C4BB57F00ABF3C5 /* Info.plist */,
 			);
 			name = osx;
-			path = "AudioPlayer Sample/OS X";
+			path = "Demo/OS X";
 			sourceTree = "<group>";
 		};
 		E2B2F9FC1C4BB5DC00ABF3C5 /* tvOS */ = {
@@ -167,7 +167,7 @@
 				E2B2FA061C4BB5DC00ABF3C5 /* Info.plist */,
 			);
 			name = tvOS;
-			path = "AudioPlayer Sample/tvOS";
+			path = Demo/tvOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +245,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E2A9AF971C498E2900FE943A /* Build configuration list for PBXProject "AudioPlayerSample" */;
+			buildConfigurationList = E2A9AF971C498E2900FE943A /* Build configuration list for PBXProject "Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -541,7 +541,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E2A9AF971C498E2900FE943A /* Build configuration list for PBXProject "AudioPlayerSample" */ = {
+		E2A9AF971C498E2900FE943A /* Build configuration list for PBXProject "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E2A9AFAC1C498E2900FE943A /* Debug */,
@@ -566,6 +566,7 @@
 				E2B2F9F61C4BB57F00ABF3C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2B2FA071C4BB5DC00ABF3C5 /* Build configuration list for PBXNativeTarget "tvos" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +575,7 @@
 				E2B2FA091C4BB5DC00ABF3C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
