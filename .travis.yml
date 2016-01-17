@@ -1,0 +1,20 @@
+sudo: required
+osx_image: xcode7.1
+language: objective-c
+
+before_install:
+
+    - export LANG=en_US.UTF-8
+    - env
+    - locale
+    - gem install cocoapods --quiet
+    - pod --version
+    - pod setup --silent
+    - pod repo update --silent
+
+script:
+
+    - pod lib lint
+    - xctool -project Demo/Demo.xcodeproj -scheme 'ios'
+    - xctool -project Demo/Demo.xcodeproj -scheme 'osx'
+    - xctool -project Demo/Demo.xcodeproj -scheme 'tvos' 

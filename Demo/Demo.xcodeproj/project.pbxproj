@@ -459,7 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				INFOPLIST_FILE = "$(SRCROOT)/AudioPlayer Sample/ios/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.AudioPlayer-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -471,7 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				INFOPLIST_FILE = "$(SRCROOT)/AudioPlayer Sample/ios/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.AudioPlayer-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/AudioPlayer Sample/OS X/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/OS X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.AudioPlayer-Sample";
@@ -499,7 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/AudioPlayer Sample/OS X/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/OS X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.AudioPlayer-Sample";
@@ -513,7 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "$(SRCROOT)/AudioPlayer Sample/tvOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.AudioPlayer-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,7 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "$(SRCROOT)/AudioPlayer Sample/tvOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.AudioPlayer-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
