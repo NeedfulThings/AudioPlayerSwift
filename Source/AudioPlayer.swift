@@ -137,6 +137,7 @@ class AudioPlayer: NSObject {
     }
     
     func fadeIn(duration: NSTimeInterval = 1.0) {
+        volume = 0.0
         fadeTo(1.0, duration: duration)
     }
     
