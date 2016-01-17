@@ -162,7 +162,8 @@ This notification is fired (via NSNotificationCenter) whenever a sound finishes 
 
 ## What's next
 
-- AudioPlayerManager
+- [ ] More tests
+- [ ] AudioPlayerManager
 - Your features!
 
 ## Contribution
