@@ -9,26 +9,26 @@
 import Foundation
 import AVFoundation
 
-enum AudioPlayerError: ErrorType {
+public enum AudioPlayerError: ErrorType {
     case FileExtension
 }
 
-class AudioPlayer: NSObject {
+public class AudioPlayer: NSObject {
 
-    static let SoundDidFinishPlayingNotification = "SoundDidFinishPlayingNotification"
-    typealias SoundCompletionHandler = (didFinish: Bool) -> Void
+    public static let SoundDidFinishPlayingNotification = "SoundDidFinishPlayingNotification"
+    public typealias SoundCompletionHandler = (didFinish: Bool) -> Void
     
     /// Name of the used to initialize the object
-    let name: String?
+    public let name: String?
 
     /// URL of the used to initialize the object
-    let URL: NSURL?
+    public let URL: NSURL?
     
     /// A callback closure that will be called when the audio finishes playing, or is stopped.
-    var completionHandler: SoundCompletionHandler?
+    internal var completionHandler: SoundCompletionHandler?
     
     /// is it playing or not?
-    var playing: Bool {
+    public var playing: Bool {
         get {
             if let nonNilsound = sound {
                 return nonNilsound.playing
@@ -38,7 +38,7 @@ class AudioPlayer: NSObject {
     }
 
     /// the duration of the sound.
-    var duration: NSTimeInterval {
+    public var duration: NSTimeInterval {
         get {
             if let nonNilsound = sound {
                 return nonNilsound.duration
@@ -48,7 +48,7 @@ class AudioPlayer: NSObject {
     }
     
     /// currentTime is the offset into the sound of the current playback position.
-    var currentTime: NSTimeInterval {
+    public var currentTime: NSTimeInterval {
         get {
             if let nonNilsound = sound {
                 return nonNilsound.currentTime
@@ -61,7 +61,7 @@ class AudioPlayer: NSObject {
     }
 
     /// The volume for the sound. The nominal range is from 0.0 to 1.0.
-    var volume: Float = 1.0 {
+    public var volume: Float = 1.0 {
         didSet {
             volume = min(1.0, max(0.0, volume));
             targetVolume = volume
@@ -72,14 +72,14 @@ class AudioPlayer: NSObject {
     /// A value of zero means to play the sound just once.
     /// A value of one will result in playing the sound twice, and so on..
     /// Any negative number will loop indefinitely until stopped.
-    var numberOfLoops: Int = 0 {
+    public var numberOfLoops: Int = 0 {
         didSet {
             sound?.numberOfLoops = numberOfLoops
         }
     }
 
     /// set panning. -1.0 is left, 0.0 is center, 1.0 is right.
-    var pan: Float = 0.0 {
+    public var pan: Float = 0.0 {
         didSet {
             sound?.pan = pan
         }
@@ -87,7 +87,7 @@ class AudioPlayer: NSObject {
     
     // MARK: Init
 
-    convenience init(fileName: String) throws {
+    public convenience init(fileName: String) throws {
         let fixedFileName = fileName.stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())
         var soundFileComponents = fixedFileName.componentsSeparatedByString(".")
         if soundFileComponents.count == 1 {
@@ -97,7 +97,7 @@ class AudioPlayer: NSObject {
         try self.init(contentsOfPath: path!)
     }
 
-    init(contentsOfPath path: String) throws {
+    public init(contentsOfPath path: String) throws {
         let fileURL = NSURL(fileURLWithPath: path)
         URL = fileURL
         name = fileURL.lastPathComponent
@@ -113,13 +113,13 @@ class AudioPlayer: NSObject {
     
     // MARK: Play / Stop
     
-    func play() {
+    public func play() {
         if playing == false {
             sound?.play()
         }
     }
     
-    func stop() {
+    public func stop() {
         if playing {
             soundDidFinishPlayingSuccessfully(false)
         }
@@ -127,7 +127,7 @@ class AudioPlayer: NSObject {
     
     // MARK: Fade
     
-    func fadeTo(volume: Float, duration: NSTimeInterval = 1.0) {
+    public func fadeTo(volume: Float, duration: NSTimeInterval = 1.0) {
         startVolume = volume;
         fadeTime = duration;
         fadeStart = NSDate().timeIntervalSinceReferenceDate
@@ -136,12 +136,12 @@ class AudioPlayer: NSObject {
         }
     }
     
-    func fadeIn(duration: NSTimeInterval = 1.0) {
+    public func fadeIn(duration: NSTimeInterval = 1.0) {
         volume = 0.0
         fadeTo(1.0, duration: duration)
     }
     
-    func fadeOut(duration: NSTimeInterval = 1.0) {
+    public func fadeOut(duration: NSTimeInterval = 1.0) {
         fadeTo(0.0, duration: duration)
     }
 
@@ -180,7 +180,7 @@ class AudioPlayer: NSObject {
 
 extension AudioPlayer: AVAudioPlayerDelegate {
     
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+    public func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         soundDidFinishPlayingSuccessfully(flag)
     }
     
