@@ -7,6 +7,9 @@
 
 AudioPlayer is a simple class for playing audio in iOS, OS X and tvOS apps.
 
+
+####**The repository has been migrated there -> https://github.com/recisio/AudioPlayerSwift — Edit**
+
 ## Usage
 
 ```
